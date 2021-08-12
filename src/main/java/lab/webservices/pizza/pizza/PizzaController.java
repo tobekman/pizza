@@ -15,29 +15,29 @@ public class PizzaController {
         this.pizzaService = pizzaService;
     }
 
-    @PostMapping("pizzas")
+    @PostMapping("/pizzas")
     public String createPizza(@RequestBody Pizza pizza) {
         pizzaService.save(pizza);
         return "Pizza saved";
     }
 
-    @GetMapping("pizzas")
+    @GetMapping("/pizzas")
     public List<Pizza> getPizzas() {
         return pizzaService.getAll();
     }
 
-    @GetMapping("pizzas/{id}")
+    @GetMapping("/pizzas/{id}")
     public Pizza getPizza(@PathVariable("id") Long id) {
         return pizzaService.getById(id);
     }
 
-    @DeleteMapping("pizzas/{id}")
+    @DeleteMapping("/pizzas/{id}")
     public String deletePizza(@PathVariable("id") Long id) {
         pizzaService.delete(id);
         return "Pizza deleted";
     }
 
-    @PutMapping("pizzas")
+    @PutMapping("/pizzas")
     public String updatePizza(@RequestBody Pizza pizza) {
         pizzaService.save(pizza);
         return "Pizza updated";
