@@ -1,6 +1,9 @@
 spring:
   datasource:
     generate-unique-name: false
+    url:
+    username:
+    password:
   h2:
     console:
       enabled: true

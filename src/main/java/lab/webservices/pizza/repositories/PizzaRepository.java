@@ -1,6 +1,7 @@
-package lab.webservices.pizza.pizza;
+package lab.webservices.pizza.repositories;
 
 
+import lab.webservices.pizza.entities.Pizza;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

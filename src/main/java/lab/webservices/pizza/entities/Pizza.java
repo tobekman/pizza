@@ -1,4 +1,4 @@
-package lab.webservices.pizza.pizza;
+package lab.webservices.pizza.entities;
 
 import lombok.Data;
 
@@ -17,7 +17,7 @@ public class Pizza {
 
     private String toppings;
 
-    private double price;
+    private int price;
 
 
 }

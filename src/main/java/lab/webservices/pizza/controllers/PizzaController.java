@@ -1,12 +1,15 @@
-package lab.webservices.pizza.pizza;
+package lab.webservices.pizza.controllers;
 
+import lab.webservices.pizza.entities.Pizza;
+import lab.webservices.pizza.services.PizzaService;
+import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("api/1.0")
+@RequestMapping("/api/1.0")
 public class PizzaController {
 
     PizzaService pizzaService;
@@ -14,6 +17,7 @@ public class PizzaController {
     public PizzaController(PizzaService pizzaService) {
         this.pizzaService = pizzaService;
     }
+
 
     @PostMapping("/pizzas")
     public String createPizza(@RequestBody Pizza pizza) {

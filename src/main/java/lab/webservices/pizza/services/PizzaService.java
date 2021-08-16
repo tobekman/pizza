@@ -1,5 +1,7 @@
-package lab.webservices.pizza.pizza;
+package lab.webservices.pizza.services;
 
+import lab.webservices.pizza.entities.Pizza;
+import lab.webservices.pizza.repositories.PizzaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
