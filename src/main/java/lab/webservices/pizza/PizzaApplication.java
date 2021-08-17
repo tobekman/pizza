@@ -1,5 +1,6 @@
 package lab.webservices.pizza;
 
+import lab.webservices.pizza.entities.Pizza;
 import lab.webservices.pizza.repositories.PizzaRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,7 +18,9 @@ public class PizzaApplication {
     @Bean
     public CommandLineRunner init(PizzaRepository pizzaRepository) {
         return args -> {
-          //spara pizzor i databasen
+
+            //add data to database or configurations and stuff
+
         };
     }
 
