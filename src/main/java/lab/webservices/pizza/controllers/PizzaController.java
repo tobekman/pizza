@@ -2,7 +2,7 @@ package lab.webservices.pizza.controllers;
 
 import lab.webservices.pizza.entities.Pizza;
 import lab.webservices.pizza.services.PizzaService;
-import lombok.NoArgsConstructor;
+import lab.webservices.pizza.services.PizzaService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,6 +33,21 @@ public class PizzaController {
     @GetMapping("/pizzas/{id}")
     public Pizza getPizza(@PathVariable("id") Long id) {
         return pizzaService.getById(id);
+    }
+
+    @GetMapping("/pizzas/toppings={toppings}")
+    public List<Pizza> getPizzasByTopping(@PathVariable("toppings") String toppings) {
+        return pizzaService.getPizzasWithToppings(toppings);
+    }
+
+    @GetMapping("/pizzas/price/below={price}")
+    public List<Pizza> getPizzasByPriceBelow(@PathVariable("price") int price) {
+        return pizzaService.getPizzasWithPriceBelow(price);
+    }
+
+    @GetMapping("/pizzas/price/above={price}")
+    public List<Pizza> getPizzasByPriceAbove(@PathVariable("price") int price) {
+        return pizzaService.getPizzasWithPriceAbove(price);
     }
 
     @DeleteMapping("/pizzas/{id}")

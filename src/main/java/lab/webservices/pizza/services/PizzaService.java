@@ -33,5 +33,17 @@ public class PizzaService {
         pizzaRepository.deletePizzaById(id);
     }
 
+    public List<Pizza> getPizzasWithToppings(String toppings) {
+        return pizzaRepository.findPizzasByToppingsContains(toppings);
+    }
+
+    public List<Pizza> getPizzasWithPriceBelow(int price) {
+        return pizzaRepository.findPizzasByPriceBefore(price);
+    }
+
+    public List<Pizza> getPizzasWithPriceAbove(int price) {
+        return pizzaRepository.findPizzasByPriceAfter(price);
+    }
+
 
 }
